@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Depot | The Intelligent Home Navigator</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Google Fonts - Inter (for body) and Bebas Neue (for headings) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f5f3f1; /* Warm, natural background */
+            color: #2d3748; /* Dark gray text */
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Bebas Neue', sans-serif;
+            letter-spacing: 1px;
+        }
+        .hero-section {
+            background: linear-gradient(to right, #FF8C00, #FFA500); /* Home Depot Orange gradient */
+            color: white;
+            padding: 8rem 0;
+            text-align: center;
+        }
+        .section-heading {
+            color: #2d3748;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+        .card {
+            background-color: white;
+            border-radius: 0.75rem; /* rounded-lg */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-xl */
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        .ai-feature {
+            background-color: #e2e8f0; /* Light blue-gray */
+            border-left: 4px solid #FF8C00; /* Home Depot Orange accent */
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        .ai-feature strong {
+            color: #2d3748;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 320px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 380px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <span class="text-4xl font-bold text-[#FF8C00] tracking-wider">HOME DEPOT</span>
+            </div>
+            <div class="hidden md:flex space-x-6 text-gray-600 font-medium">
+                <a href="#problem" class="hover:text-[#FF8C00]">Challenge</a>
+                <a href="#solution" class="hover:text-[#FF8C00]">Solution</a>
+                <a href="#ai-tech" class="hover:text-[#FF8C00]">AI Core</a>
+                <a href="#approach" class="hover:text-[#FF8C00]">Approach</a>
+                <a href="#roadmap" class="hover:text-[#FF8C00]">Roadmap</a>
+                <a href="#outcomes" class="hover:text-[#FF8C00]">Outcomes</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-8">
+
+        <!-- Hero Section -->
+        <section id="strategy" class="hero-section rounded-xl shadow-lg mb-16">
+            <div class="max-w-4xl mx-auto px-6">
+                <h1 class="text-5xl md:text-6xl font-extrabold leading-tight mb-4">
+                    The Intelligent Home Navigator
+                </h1>
+                <p class="text-xl md:text-2xl font-light">
+                    Empowering Home Depot's Digital Ecosystem with Hyper-Predictive SEO AI
+                </p>
+                <p class="mt-6 text-lg">
+                    Transforming how customers discover, plan, and complete their home improvement projects.
+                </p>
+            </div>
+        </section>
+
+        <!-- Problem Statement -->
+        <section id="problem" class="mb-16">
+            <h2 class="text-5xl md:text-6xl section-heading text-center">The Challenge: Navigating the Vast Home Improvement Landscape</h2>
+            <div class="card">
+                <p class="text-lg mb-4">
+                    Home Depot stands as the undisputed leader in home improvement, yet the digital landscape presents unique complexities.
+                    Customers embark on diverse, often multi-stage journeys, from simple product purchases to intricate renovation projects.
+                    Traditional SEO, while foundational, often struggles to:
+                </p>
+                <ul class="list-disc list-inside text-lg space-y-2">
+                    <li>Anticipate rapidly evolving customer intent and emerging market trends.</li>
+                    <li>Seamlessly connect vast product catalogs with nuanced, project-specific needs.</li>
+                    <li>Provide real-time, personalized guidance throughout the entire home improvement lifecycle.</li>
+                    <li>Efficiently align SEO efforts with cross-functional business priorities across a massive organization.</li>
+                    <li>Proactively identify and capitalize on untapped "white space" opportunities in a highly competitive market.</li>
+                </ul>
+                <p class="text-lg mt-4">
+                    Our goal is to transcend reactive optimization, establishing a proactive, intelligent system that truly understands, predicts, and serves every customer's unique home improvement journey.
+                </p>
+            </div>
+        </section>
+
+        <!-- Our Solution -->
+        <section id="solution" class="mb-16">
+            <h2 class="text-5xl md:text-6xl section-heading text-center">Our Solution: A Sentient Digital Ecosystem</h2>
+            <div class="card">
+                <p class="text-lg mb-4">
+                    We propose "The Intelligent Home Navigator," an AI-first strategy designed to transform Home Depot's digital presence into a truly sentient ecosystem.
+                    This revolutionary approach extends beyond conventional SEO, embedding advanced AI to create a dynamic, predictive, and deeply integrated intelligence layer.
+                    It's about crafting a living digital storefront that guides customers effortlessly from initial inspiration to successful project completion.
+                </p>
+                <p class="text-lg font-semibold text-center mt-6">
+                    Our methodology centers on AI as the core intelligence, driving unparalleled personalization, accelerating innovation, building digital resilience, and enhancing every customer's experiential engagement.
+                </p>
+            </div>
+        </section>
+
+        <!-- Key AI Technologies -->
+        <section id="ai-tech" class="mb-16 bg-gray-900 text-white p-8 rounded-xl shadow-lg">
+            <h2 class="text-5xl md:text-6xl font-bold text-white mb-4 text-center">The AI Core: Technologies Powering the Navigator</h2>
+            <p class="text-gray-300 mb-8 text-center max-w-3xl mx-auto">Our solution leverages a robust suite of advanced AI technologies to deliver hyper-predictive SEO capabilities and drive transformative growth.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="p-4 bg-blue-700 rounded-lg shadow-sm">
+                    <h4 class="text-2xl font-bold text-white mb-2">Machine Learning (ML)</h4>
+                    <p class="text-gray-200">Powers predictive analytics, identifies complex patterns in user behavior, and optimizes algorithms for peak performance and strategic prioritization.</p>
+                </div>
+                <div class="p-4 bg-green-700 rounded-lg shadow-sm">
+                    <h4 class="text-2xl font-bold text-white mb-2">Natural Language Processing (NLP) & Generation (NLG)</h4>
+                    <p class="text-gray-200">Enables deep understanding of search intent, automates content brief generation, facilitates conversational dashboards, and crafts insightful automated reports.</p>
+                </div>
+                <div class="p-4 bg-purple-700 rounded-lg shadow-sm">
+                    <h4 class="text-2xl font-bold text-white mb-2">Generative AI</h4>
+                    <p class="text-gray-200">Synthesizes complex insights, creates dynamic and personalized content at scale, and assists in generating innovative content strategies.</p>
+                </div>
+                <div class="p-4 bg-red-700 rounded-lg shadow-sm">
+                    <h4 class="text-2xl font-bold text-white mb-2">Computer Vision</h4>
+                    <p class="text-gray-200">Optimizes image search performance, analyzes visual search trends, and provides real-time validation of visual content elements across the site.</p>
+                </div>
+                <div class="p-4 bg-yellow-700 rounded-lg shadow-sm">
+                    <h4 class="text-2xl font-bold text-white mb-2">Reinforcement Learning</h4>
+                    <p class="text-gray-200">Continuously refines project prioritization and optimization strategies, learning from real-world outcomes to maximize impact and efficiency.</p>
+                </div>
+                <div class="p-4 bg-indigo-700 rounded-lg shadow-sm">
+                    <h4 class="text-2xl font-bold text-white mb-2">Knowledge Graphs</h4>
+                    <p class="text-gray-200">Maps intricate relationships between products, projects, and customer intent, uncovering deep semantic opportunities and enhancing topical authority.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            
+            <!-- New Chart: SEO Effort Distribution -->
+            <div id="effort-distribution" class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                <h2 class="text-5xl font-bold text-gray-800 mb-4">Strategic Effort Allocation</h2>
+                <p class="text-gray-600 mb-6">Our AI-driven strategy intelligently allocates resources across key SEO pillars, ensuring balanced and impactful growth for Home Depot.</p>
+                <div class="chart-container">
+                    <canvas id="effortDistributionChart"></canvas>
+                </div>
+            </div>
+
+            <!-- New Chart: Strategic Focus Areas -->
+            <div id="strategic-focus" class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                <h2 class="text-5xl font-bold text-gray-800 mb-4">Core Strategic Focus Areas</h2>
+                <p class="text-gray-600 mb-6">AI identifies and prioritizes critical content and intent clusters for maximum organic impact and superior customer satisfaction.</p>
+                <div class="chart-container">
+                    <canvas id="strategicFocusChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Addressing Home Depot's Needs -->
+            <div id="approach" class="lg:col-span-2 bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                <h2 class="text-5xl font-bold text-gray-800 mb-4 text-center">Our AI-Driven Approach: Addressing Home Depot's Core Needs</h2>
+
+                <!-- 20% Cross-functional Partnership -->
+                <div class="card bg-gray-50 border border-gray-200">
+                    <h3 class="text-3xl font-semibold mb-4 text-orange-600">
+                        20% Cross-functional Partnership: AI-Powered Alignment & Insight Sharing
+                    </h3>
+                    <p class="text-lg mb-4">
+                        We elevate SEO from a siloed function to a central intelligence hub, proactively informing and integrating with all key business units.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="ai-feature">
+                            <strong>AI-Powered "Home Improvement Intent" Hub:</strong> Leverages Generative AI to synthesize disparate data (search queries, sales, inventory, social media, weather), generating actionable narratives and insights for every department.
+                            <p class="text-sm text-gray-700 mt-1"><em>Example: "AI identifies a 30% surge in 'smart thermostat installation' searches in colder regions, correlating with rising energy costs. Recommends proactive content push and inventory alignment with HVAC and Smart Home teams."</em></p>
+                        </div>
+                        <div class="ai-feature">
+                            <strong>Predictive Alignment Dashboards:</strong> Interactive, conversational dashboards powered by AI. Stakeholders can ask natural language questions ("What's the projected SEO impact of launching new exclusive appliance brands next quarter?"), receiving real-time, data-backed answers.
+                        </div>
+                        <div class="ai-feature">
+                            <strong>Automated Risk & Opportunity Flagging:</strong> AI utilizes Anomaly Detection to pinpoint sudden ranking drops and Pattern Recognition to identify emerging niche opportunities, ensuring swift, proactive intervention.
+                        </div>
+                        <div class="ai-feature">
+                            <strong>Natural Language Generation (NLG) for Stakeholder Reports:</strong> AI generates concise, tailored reports, translating complex SEO data into clear, actionable business insights for non-SEO teams, fostering deep understanding and strategic prioritization.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 10% Professional Development and Process Improvement -->
+                <div class="card bg-gray-50 border border-gray-200">
+                    <h3 class="text-3xl font-semibold mb-4 text-orange-600">
+                        10% Professional Development & Process Improvement: Future-Proofing with AI
+                    </h3>
+                    <p class="text-lg mb-4">
+                        This commitment ensures Home Depot not only stays current but actively shapes the future of SEO, driven by continuous AI-powered learning and adaptive strategies.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="ai-feature">
+                            <strong>AI-Driven Trend Forecasting for SEO:</strong> AI performs advanced Scenario Planning (e.g., "If voice search adoption doubles, what's the projected impact on long-tail keyword performance for DIY guides?"). It identifies weak signals for future search behavior, securing a crucial first-mover advantage.
+                        </div>
+                        <div class="ai-feature">
+                            <strong>Automated SEO Best Practice Integration & Guardrails:</strong> Our AI acts as an intelligent "guardrail," providing Real-time Content Scoring during content creation, flagging deviations and ensuring continuous adherence to evolving industry standards.
+                        </div>
+                        <div class="ai-feature">
+                            <strong>Personalized Learning Paths for the Team:</strong> AI assesses individual team strengths and weaknesses, curating bespoke learning modules focused on the latest AI-driven SEO techniques, ensuring the team remains at the cutting edge.
+                        </div>
+                        <div class="ai-feature">
+                            <strong>Generative AI for Process Documentation:</strong> AI automatically updates internal SEO process documentation based on observed changes or tool integrations, fostering living, accurate knowledge sharing across the organization.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 25% Project Planning and Implementation -->
+                <div class="card bg-gray-50 border border-gray-200">
+                    <h3 class="text-3xl font-semibold mb-4 text-orange-600">
+                        25% Project Planning & Implementation: AI-Accelerated Execution
+                    </h3>
+                    <p class="text-lg mb-4">
+                        AI streamlines the entire project lifecycle, from initial strategic planning and prioritization to real-time implementation monitoring and optimization.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="ai-feature">
+                            <strong>Intelligent Project Prioritization Engine:</strong> Utilizes Reinforcement Learning to continually refine its prioritization model based on actual outcomes, becoming increasingly adept at identifying truly impactful initiatives.
+                        </div>
+                        <div class="ai-feature">
+                            <strong>Automated Content Brief Generation:</strong> AI generates highly detailed, optimized content briefs, including Semantic Keyword Clusters and Entity Salience scores, and suggests optimal content formats (e.g., video tutorials, comparison tables).
+                        </div>
+                        <div class="ai-feature">
+                            <strong>Real-time Implementation Monitoring & Feedback:</strong> AI employs Computer Vision to verify visual elements and NLP to confirm text changes are live and accurate, dramatically accelerating troubleshooting across Home Depot's vast digital footprint.
+                        </div>
+                        <div class="ai-feature">
+                            <strong>A/B Testing & Multivariate Optimization:</strong> AI orchestrates and analyzes large-scale A/B and multivariate tests on various SEO elements, even generating hypotheses for new tests based on observed user behavior and competitive analysis.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 15% Reporting & Measurement -->
+                <div class="card bg-gray-50 border border-gray-200">
+                    <h3 class="text-3xl font-semibold mb-4 text-orange-600">
+                        15% Reporting & Measurement: Data-Driven Insights with Predictive Power
+                    </h3>
+                    <p class="text-lg mb-4">
+                        Our reporting transcends historical data, providing predictive insights and automated root cause analysis to drive continuous, informed improvement.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="ai-feature">
+                            <strong>Predictive Performance Analytics:</strong> AI leverages advanced Time Series Forecasting models to predict future organic traffic and revenue, considering historical data, seasonality, marketing spend, and economic indicators.
+                        </div>
+                        <div class="ai-feature">
+                            <strong>Automated Root Cause Analysis:</strong> When performance deviates from expectations, AI automatically analyzes vast datasets to pinpoint probable root causes and provides prescriptive recommendations for immediate action and long-term prevention.
+                        </div>
+                        <div class="ai-feature">
+                            <strong>Granular Impact Attribution:</strong> Employs sophisticated attribution models (e.g., Shapley Values) to precisely attribute organic gains to specific SEO initiatives, demonstrating clear, quantifiable ROI.
+                        </div>
+                        <div class="ai-feature">
+                            <strong>Customizable, Interactive Dashboards with Natural Language Query:</strong> AI-powered dashboards empower stakeholders to drill down into specific metrics, ask natural language questions, and perform "What-If" Scenario Modeling to simulate strategy impacts.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 30% SEO Strategy and Analysis -->
+                <div class="card bg-gray-50 border border-gray-200">
+                    <h3 class="text-3xl font-semibold mb-4 text-orange-600">
+                        30% SEO Strategy & Analysis: Hyper-Intelligent Opportunity Identification
+                    </h3>
+                    <p class="text-lg mb-4">
+                        This core component leverages AI to uncover profound insights and identify strategic opportunities that traditional methods might overlook.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="ai-feature">
+                            <strong>Semantic Search Opportunity Mapping:</strong> AI utilizes Knowledge Graphs to understand complex relationships between products, projects, and customer needs, identifying comprehensive, multi-stage search journeys (e.g., from "bathroom vanity" to "plumbing fixture installation").
+                        </div>
+                        <div class="ai-feature">
+                            <strong>Competitive Intelligence & White Space Analysis:</strong> AI performs Automated Content Audits of competitors, identifying their top-performing content and then pinpointing "white space" opportunities for Home Depot to strategically dominate.
+                        </div>
+                        <div class="ai-feature">
+                            <strong>Content Gap & Cannibalization Detection:</strong> AI employs Topical Authority Modeling to ensure Home Depot's content strategy builds deep expertise around core home improvement themes, optimizing for comprehensive subject matter authority, not just individual keywords.
+                        </div>
+                        <div class="ai-feature">
+                            <strong>Personalized SERP Feature Optimization:</strong> AI analyzes Search Engine Results Page (SERP) features for relevant queries, identifying opportunities for Programmatic SEO to generate thousands of optimized pages targeting rich placements (e.g., "how-to" guides, comparison tables).
+                        </div>
+                        <div class="ai-feature">
+                            <strong>Voice Search & Visual Search Optimization:</strong> AI analyzes audio transcripts of voice queries and image metadata from visual searches to optimize content for these evolving modalities, including robust structured data for product attributes.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="roadmap" class="lg:col-span-2 bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                <h2 class="text-5xl font-bold text-gray-800 mb-4 text-center">Implementation Roadmap</h2>
+                <p class="text-gray-600 mb-8 text-center max-w-3xl mx-auto">The strategy unfolds in distinct phases, ensuring a structured and impactful AI integration into Home Depot's digital ecosystem.</p>
+                 <div class="chart-container" style="height: 420px;">
+                    <canvas id="roadmapChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Expected Outcomes -->
+            <div id="outcomes" class="lg:col-span-2 bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                <h2 class="text-5xl font-bold text-gray-800 mb-4 text-center">Expected Outcomes & Transformative Impact</h2>
+                <p class="text-lg mb-6 text-center max-w-3xl mx-auto">
+                    By implementing "The Intelligent Home Navigator," Home Depot can expect to achieve significant, measurable results:
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+                    <div class="p-4 bg-orange-50 rounded-lg shadow-sm">
+                        <h4 class="text-2xl font-bold text-orange-700 mb-2">Accelerated Organic Growth</h4>
+                        <p class="text-gray-700">Substantial increase in qualified organic traffic and conversions by proactively capturing evolving customer intent.</p>
+                    </div>
+                    <div class="p-4 bg-orange-50 rounded-lg shadow-sm">
+                        <h4 class="text-2xl font-bold text-orange-700 mb-2">Enhanced Customer Experience</h4>
+                        <p class="text-gray-700">More intuitive, personalized, and seamless digital journeys, leading to higher satisfaction and loyalty.</p>
+                    </div>
+                    <div class="p-4 bg-orange-50 rounded-lg shadow-sm">
+                        <h4 class="text-2xl font-bold text-orange-700 mb-2">Operational Efficiency & Cost Savings</h4>
+                        <p class="text-gray-700">Reduced manual effort in SEO tasks, faster content creation, and optimized resource allocation across the organization.</p>
+                    </div>
+                    <div class="p-4 bg-orange-50 rounded-lg shadow-sm">
+                        <h4 class="text-2xl font-bold text-orange-700 mb-2">Strategic Market Leadership</h4>
+                        <p class="text-gray-700">First-mover advantage in emerging search trends and "white space" opportunities, solidifying Home Depot's market dominance.</p>
+                    </div>
+                    <div class="p-4 bg-orange-50 rounded-lg shadow-sm">
+                        <h4 class="text-2xl font-bold text-orange-700 mb-2">Data-Driven Decision Making</h4>
+                        <p class="text-gray-700">Real-time, predictive insights empowering all stakeholders to make more informed and impactful business decisions.</p>
+                    </div>
+                    <div class="p-4 bg-orange-50 rounded-lg shadow-sm">
+                        <h4 class="text-2xl font-bold text-orange-700 mb-2">Future-Proofed Digital Strategy</h4>
+                        <p class="text-gray-700">An adaptive system that evolves with search engine algorithms and consumer behavior, ensuring long-term relevance and growth.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white mt-16">
+        <div class="container mx-auto px-6 py-8 text-center">
+            <p class="font-medium">&copy; 2025 The Home Depot. SEO Strategy Powered by The Intelligent Home Navigator.</p>
+            <p class="text-sm text-gray-500 mt-2">This blueprint is a conceptual representation of a proposed AI-driven SEO strategy.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Define Home Depot's vibrant palette
+        const vibrantPalette = {
+            orange: '#FF8C00', // Home Depot Orange
+            darkGray: '#2d3748', // Dark text color
+            mediumGray: '#4b5563',
+            lightGray: '#d1d5db',
+            blue: '#3B82F6', // Retained for charts, good contrast
+            teal: '#14B8A6', // Retained for charts, good contrast
+            // Removed other specific colors (red, purple, yellow, indigo) for charts
+            // to simplify and ensure better harmony with primary brand colors.
+        };
+
+        const chartTooltipTitleCallback = function(tooltipItems) {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+              return label.join(' ');
+            } else {
+              return label;
+            }
+        };
+        
+        const processLabels = (labels) => {
+            return labels.map(label => {
+                if (label.length > 16 && window.innerWidth > 768) {
+                    const words = label.split(' ');
+                    const lines = [];
+                    let currentLine = '';
+                    words.forEach(word => {
+                        if ((currentLine + word).length > 16) {
+                            lines.push(currentLine.trim());
+                            currentLine = word + ' ';
+                        } else {
+                            currentLine += word + ' ';
+                        }
+                    });
+                    lines.push(currentLine.trim());
+                    return lines;
+                }
+                return label;
+            });
+        };
+
+        // Chart 1: SEO Effort Distribution (Doughnut Chart)
+        const effortDistributionChartCtx = document.getElementById('effortDistributionChart').getContext('2d');
+        new Chart(effortDistributionChartCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Cross-functional Partnership (20%)', 'Project Planning & Implementation (25%)', 'SEO Strategy & Analysis (30%)', 'Reporting & Measurement (15%)', 'Professional Development (10%)'],
+                datasets: [{
+                    label: 'Effort Distribution',
+                    data: [20, 25, 30, 15, 10],
+                    backgroundColor: [
+                        vibrantPalette.orange,
+                        vibrantPalette.blue, /* Using blue for distinct segment */
+                        vibrantPalette.darkGray,
+                        vibrantPalette.teal, /* Using teal for distinct segment */
+                        vibrantPalette.mediumGray /* Using a lighter gray for the smallest segment for contrast */
+                    ],
+                    borderColor: '#f5f3f1',
+                    borderWidth: 4,
+                    hoverOffset: 8
+                }]
+            },
+            options: {
+                maintainAspectRatio: false,
+                cutout: '60%',
+                plugins: {
+                    legend: { position: 'bottom', labels: { padding: 20, font: { family: "'Inter', sans-serif", size: 14 } } },
+                    tooltip: { 
+                        titleFont: { family: "'Inter', sans-serif" },
+                        bodyFont: { family: "'Inter', sans-serif" },
+                        callbacks: { title: chartTooltipTitleCallback } 
+                    }
+                }
+            }
+        });
+
+        // Chart 2: Strategic Focus Areas (Radar Chart)
+        const strategicFocusChartCtx = document.getElementById('strategicFocusChart').getContext('2d');
+        new Chart(strategicFocusChartCtx, {
+            type: 'radar',
+            data: {
+                labels: processLabels(['DIY Project Guides', 'Product Research & Comparisons', 'Local Store & Services', 'Pro & Contractor Solutions', 'Emerging Trends & Innovations', 'Seasonal & Holiday Prep']),
+                datasets: [{
+                    label: 'Strategic Importance',
+                    data: [5, 4, 3, 4, 5, 4], // Example data, can be refined based on actual strategy
+                    backgroundColor: 'rgba(255, 140, 0, 0.2)', // Home Depot Orange with transparency
+                    borderColor: vibrantPalette.orange,
+                    pointBackgroundColor: vibrantPalette.orange,
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: vibrantPalette.orange
+                }, {
+                    label: 'Traffic Potential',
+                    data: [4, 5, 3, 3, 4, 5], // Example data
+                    backgroundColor: 'rgba(45, 55, 72, 0.2)', // Dark Gray with transparency
+                    borderColor: vibrantPalette.darkGray,
+                    pointBackgroundColor: vibrantPalette.darkGray,
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: vibrantPalette.darkGray
+                }]
+            },
+            options: {
+                maintainAspectRatio: false,
+                scales: {
+                    r: {
+                        angleLines: { color: 'rgba(0, 0, 0, 0.1)' },
+                        grid: { color: 'rgba(0, 0, 0, 0.1)' },
+                        pointLabels: { font: { family: "'Inter', sans-serif", size: 13 }, color: vibrantPalette.mediumGray },
+                        ticks: {
+                            backdropColor: 'transparent',
+                            stepSize: 1,
+                            beginAtZero: true
+                        }
+                    }
+                },
+                plugins: {
+                    legend: { position: 'top', labels: { font: { family: "'Inter', sans-serif" } } },
+                    tooltip: { 
+                        titleFont: { family: "'Inter', sans-serif" },
+                        bodyFont: { family: "'Inter', sans-serif" },
+                        callbacks: { title: chartTooltipTitleCallback } 
+                    }
+                }
+            }
+        });
+
+        // Chart 3: Implementation Roadmap (Bar Chart)
+        const roadmapChartCtx = document.getElementById('roadmapChart').getContext('2d');
+        new Chart(roadmapChartCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Phase 1: Discovery & Foundation (8 Weeks)', 'Phase 2: AI Integration & Content Scaling (6 Weeks)', 'Phase 3: Hyper-Personalization & Automation (4 Weeks)', 'Phase 4: Ecosystem Expansion & Continuous Learning (8 Weeks)'],
+                datasets: [{
+                    label: 'Duration (Weeks)',
+                    data: [8, 6, 4, 8],
+                    backgroundColor: [
+                        'rgba(255, 140, 0, 0.7)', // Home Depot Orange
+                        'rgba(59, 130, 246, 0.7)', // Blue
+                        'rgba(20, 184, 166, 0.7)', // Teal
+                        'rgba(45, 55, 72, 0.7)' // Dark Gray
+                    ],
+                    borderColor: [
+                        vibrantPalette.orange,
+                        vibrantPalette.blue,
+                        vibrantPalette.teal,
+                        vibrantPalette.darkGray
+                    ],
+                    borderWidth: 2,
+                    borderRadius: 5
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                maintainAspectRatio: false,
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        grid: { display: false },
+                        title: { display: true, text: 'Duration in Weeks', font: { family: "'Inter', sans-serif", size: 14 } },
+                        ticks: { font: { family: "'Inter', sans-serif" }}
+                    },
+                    y: {
+                        grid: { display: false },
+                        ticks: { font: { family: "'Inter', sans-serif", size: 14 }}
+                    }
+                },
+                plugins: {
+                    legend: { display: false },
+                    tooltip: { 
+                        titleFont: { family: "'Inter', sans-serif" },
+                        bodyFont: { family: "'Inter', sans-serif" },
+                        callbacks: { title: chartTooltipTitleCallback } 
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
